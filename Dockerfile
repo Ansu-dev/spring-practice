@@ -22,8 +22,5 @@ WORKDIR /app
 # 호스트 머신에서 JAR 파일을 컨테이너로 복사합니다.
 COPY build/libs/*.jar app.jar
 
-# 서버를 띄울 port
-EXPOSE 8080
-
 # 컨테이너가 시작될 때 실행할 명령어를 설정합니다.
 ENTRYPOINT ["java", "-jar", "app.jar"]
